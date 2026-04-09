@@ -108,5 +108,5 @@ Defina constantes para taxas de câmbio USD→BRL e EUR→BRL. Crie um salário 
 USD_BRL = 5.15
 EUR_BRL = 6.02
 
-usd_salary = 8_000
-print(f"USD salary {usd_salary}, BRL salary {usd_salary * USD_BRL}, EUR salary {(usd_salary * USD_BRL) / EUR_BRL}")
+usd_sallary = 8_000
+print(f"USD salary {usd_sallary}, BRL salary {usd_sallary * USD_BRL}, EUR salary {(usd_sallary * USD_BRL) / EUR_BRL}")
