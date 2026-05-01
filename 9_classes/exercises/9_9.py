@@ -1,23 +1,9 @@
-class Dog:
-    """models a dog"""
-
-    def __init__(self, name, age):
-        """constructor method that starts name and age"""
-        self.name = name
-        self.age = age
-
-    def sit(self):
-        """sit method"""
-        print(f"{self.name} is sitting.")
-
-    def roll_over(self):
-        """roll over method"""
-        print(f"{self.name} rolled over.")
-
-my_dog = Dog('Linda', 10)
-print(f'{my_dog.name} is {my_dog.age}.')
-my_dog.sit()
-my_dog.roll_over()
+# 9.9 Trocar bateria: Utilize a versão final do electric_car.py dessa seção. Adicione um
+# método à classe Battery chamado upgrade_battery(). Esse método deve verificar o tamanho
+# da bateria e definir a capacidade como 65, caso necessário. Crie um carro elétrico com
+# um tamanho default de bateria, chame get_range() uma vez e, depois, chame get_range()
+# uma segunda vez, após atualizar a bateria. Você deve ver aumento no alcance de distância
+# do carro.
 
 class Car:
     def __init__(self, make, model, year):
@@ -45,25 +31,16 @@ class Car:
         else:
             print("you can't roll it back!")
 
-my_car = Car(make='audi', model='a4', year=2024)
-print(my_car.get_descriptive_name())
-my_car.read_odometer()
-
-my_car.odometer_reading = 10
-my_car.read_odometer() # 10
-
-my_car.update_odometer(kilometrage=20)
-my_car.read_odometer() # 20
-
-my_car.increment_odometer(kilometers=10)
-my_car.read_odometer() # 30
-
 class Battery:
     def __init__(self, battery_size=40):
         self.battery_size = battery_size
 
     def describe_battery(self):
         print(f"The battery size is {self.battery_size}")
+
+    def upgrade_battery(self):
+        if self.battery_size <= 65:
+            self.battery_size = 65
 
 class ElectricCar(Car):
     def __init__(self, make, model, year):
@@ -78,5 +55,3 @@ my_byd = ElectricCar('byd', 'dolphin', 2025)
 my_byd.battery.describe_battery()
 
 print(my_byd.get_descriptive_name())
-
-
